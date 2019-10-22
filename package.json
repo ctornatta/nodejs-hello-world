@@ -6,7 +6,7 @@
     "start": "node ./bin/www.js"
   },
   "dependencies": {
-    "express": "*",
+    "express": ">=4.17.1",
     "debug": "*",
     "https-proxy-agent": ">=3.0.0",
     "fstream": ">=1.0.12"
