@@ -2,11 +2,11 @@ var express = require('express');
 var app = express();
 var redis = require('redis');
 
-
-
 app.get('/', function (req, res) {
 
-  var client = redis.createClient("redis://127.0.0.1:6379");
+  //process.env.REDIS_URL || 'redis://127.0.0.1:6379'
+  //var client = redis.createClient("redis://127.0.0.1:6379");
+  var client = redis.createClient(process.env.REDIS_URL || 'redis://127.0.0.1:6379');
 
   client.on('connect', function() {
     res.send('Redis client connected');
